@@ -9,6 +9,9 @@ import { useState } from 'react'
 function App() {
 
   const [selectedGenre, setSelectedGenre] = useState(null);
+  const [selectedPlatform, setSelectedPlatform] = useState(null);
+
+  const genres = []
 
   return (
     <Grid templateAreas={{
@@ -29,8 +32,8 @@ function App() {
       </GridItem>
       </Show>
       <GridItem pl='2' bg='green.300' area={'main'}>
-        <PlatformSelector />
-        <GameGrid selectedGenre={selectedGenre} />
+        <PlatformSelector selectedPlatform={selectedPlatform} onSelectPlatform={ (platform) => { setSelectedPlatform(platform)} } />
+        <GameGrid selectedPlatform={selectedPlatform} selectedGenre={selectedGenre} />
       </GridItem>      
   </Grid>
   )

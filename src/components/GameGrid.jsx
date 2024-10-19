@@ -6,9 +6,9 @@ import GameCardSkeleton from './GameCardSkeleton.jsx'
 import GameCardContainer from './GameCardContainer.jsx'
 
 
-const GameGrid = (selectedGenre) => {
+const GameGrid = ({selectedGenre, selectedPlatform}) => {
 
-    const {data, error, isLoading} = useGames(selectedGenre);
+    const {data, error, isLoading} = useGames(selectedGenre, selectedPlatform);
     const skeletons = [1,2,3,4,5,6,7,8];
     
   return (
