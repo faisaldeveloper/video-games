@@ -1,9 +1,9 @@
 import useData from './useData.jsx';
 
-const useGames = (selectedGenre, selectedPlatform) => useData('/games', {
+const useGames = (gameQuery) => useData('/games', {
     params: {
-        genres: selectedGenre?.id,
-        platforms: selectedPlatform?.id
-        }}, [selectedGenre?.id, selectedPlatform?.id] );
+        genres: gameQuery.genre?.id,
+        platforms: gameQuery.platform?.id
+        }}, [gameQuery]);
 
 export default useGames;
