@@ -32,7 +32,7 @@ function App() {
       <GridItem pl='2' bg='green.300' area={'main'}>
         <HStack spacing={5} marginBottom={2}>
         <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={ (platform) => {setGameQuery({...gameQuery, platform})} } />
-        <SortSelector />
+        <SortSelector selectedOrder={gameQuery.sortOrder} onSelectSortOrder={ (sortOrder) => {setGameQuery({...gameQuery, sortOrder})} } />
         </HStack>
         <GameGrid gameQuery={gameQuery} />
       </GridItem>      
