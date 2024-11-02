@@ -18,7 +18,7 @@ const GameGrid = ({gameQuery}) => {
         { isLoading && skeletons.map(skeleton => <GameCardContainer key={skeleton}><GameCardSkeleton /></GameCardContainer>)}
         { data.map((game) => (
             <GameCardContainer key={game.id}>
-              <GameCard game={game} />
+              <GameCard key={game.id} game={game} />
             </GameCardContainer>
         ))}
     </SimpleGrid>
