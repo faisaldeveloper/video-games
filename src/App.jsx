@@ -22,7 +22,7 @@ function App() {
         }}
     >            
       <GridItem area={'nav'}> ** {gameQuery.genre ? gameQuery.genre.name + ' Genres' : 'All Genres'}
-        <NavBar />
+        <NavBar onSearch={(searchText) => setGameQuery({...gameQuery, searchText}) } />
       </GridItem>
       <Show above="lg">
       <GridItem pl='2' bg='grey.300' area={'aside'} paddingX={5}>
